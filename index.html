@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <span id="clockDisplay"></span>
+        </div>
+        <h1 >To-Do List</h1>
+        <form id="f1">
+            <input type="text" id="inf" placeholder="Enter task" required>
+            <input type="date" id="date" required>
+            <select id="category" required>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+             
+            </select>
+            <input type="number" id="priority" placeholder="Priority (1-5)" min="1" max="5" required>
+            <input type="text" id="labels" placeholder="Labels (comma-separated)">
+            <button type="submit" id="add">Add Task</button >
+        </form>
+
+        <div id="sorting-controls">
+            <button id="sort-by-due-date">Sort by Due Date</button>
+            <button id="sort-by-priority">Sort by Priority</button>
+            <button id="sort-by-completion">Sort by Completion</button>
+            <button id="sort-by-category">Sort by Category</button>
+            <input type="text" id="search-input" placeholder="Search tasks">
+        </div>
+
+        <div id="filter-controls">
+            <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+               
+            </select>
+            <button id="filter-button">Filter</button>
+        </div>
+
+        <div id="tasks"></div>
+    </div>
+
+</body>
+</html>
